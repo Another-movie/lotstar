@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        max-width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      .footer {
+        background-color: #1a1a1a;
+        padding: 2.625rem 1.25rem 2.875rem;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <div>LOGO</div>
+        <nav class="nav__list--wrapper">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../collections/cars.html">Cars</a>
+            </li>
+            <li class="nav__item"><a href="">Celebrity</a></li>
+            <li class="nav__item"><a href="">Financial Freedom</a></li>
+            <li class="nav__item"><a href="">Travel</a></li>
+            <li class="nav__item"><a href="">House</a></li>
+            <li class="nav__item"><a href="">Winners</a></li>
+            <li class="nav__item"><i class="far fa-user-circle"></i></li>
+            <li class="nav__item"><i class="fal fa-shopping-cart"></i></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div style="display: flex">
+      <section style="margin: 32px; width: 70%">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="../assets/cam.jpeg" style="width: 100%" />
+            <div
+              style="
+                text-align: center;
+                position: absolute;
+                bottom: 16px;
+                left: 50%;
+              "
+            >
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <!-- <span class="dot" onclick="currentSlide(3)"></span> -->
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="../assets/cam2.jpeg" style="width: 100%" />
+            <div
+              style="
+                text-align: center;
+                position: absolute;
+                bottom: 16px;
+                left: 50%;
+              "
+            >
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <!-- <span class="dot" onclick="currentSlide(3)"></span> -->
+            </div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <h2 style="margin-bottom: 20px">Что вы получите? TOYOTA CAMRY 75</h2>
+        <div style="font-size: 16px; color: #1a1a1a">
+          Стильный дизайн с динамичными линиями кузова, модульная архитектура
+          TNGA, качественно новое воплощение самых передовых технологий
+          и премиальный комфорт — обновленная Toyota Camry вдохновит вас
+          на успеx как на дороге, так и в жизни. Просторный салон Toyota Camry,
+          позволяющий комфортно разместиться и водителю и пассажирам, передовые
+          технологии, мультимедийная система с поддержкой Apple Carplay©️
+          и Android Auto©️ позволят вам раствориться в комфорте и наслаждаться
+          каждой минутой своего пути.
+        </div>
+        <div style="margin-top: 12px; font-weight: 700">
+          Технические характеристики
+          <div style="margin: 16px 16px">
+            <div style="font-weight: 700">Рабочий объем: 2494 см³</div>
+            <div style="font-weight: 700">Мощность (л/с): 199 л.с.</div>
+            <div style="font-weight: 700">
+              Мощность (кВт/при об/мин): 147 / 6600
+            </div>
+            <div style="font-weight: 700">Трансмиссия: 8АТ</div>
+            <div style="font-weight: 700">Коробка передач: автомат</div>
+            <div style="font-weight: 700">Тип привода: 2WD</div>
+            <div style="font-weight: 700">Длина кузова: 4м 88 см</div>
+            <div style="font-weight: 700">Ширина кузова: 1 м 84 см</div>
+            <div style="font-weight: 700">Высота кузова: 1 м 45 см</div>
+            <div style="font-weight: 700">Клиренс: 15 см</div>
+            <div style="font-weight: 700">Объем топливного бака (л): 60</div>
+            <div style="font-weight: 700">Тип топлива: бензин</div>
+            <div style="font-weight: 700">
+              Расход топлива,город/трасса/смешанный (л): 9.3 / 5.4 / 6.8
+            </div>
+            <div style="font-weight: 700">
+              Максимальная скорость (км/ч): 210 км/ч
+            </div>
+            <div style="font-weight: 700">
+              Разгон 0 — 100 км/ч (сек): 8.7 сек
+            </div>
+            <div style="font-weight: 700">Транспортный налог: 20 126 ₸</div>
+          </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px">Кому это поможет?</h2>
+        <img
+          style="width: 100%; margin-bottom: 16px"
+          src="../assets/safe.jpeg"
+          alt=""
+        />
+        <div style="font-size: 16px; color: #1a1a1a">
+          В Кызылординской области, Аральском районе от аномальной засухи
+          высохли пастбища, что привело к падежу крупно-рогатого скота. Введён
+          режим чрезвычайной ситуации. По официальным данным, падеж составил
+          более 500 голов скота Местное население - преимущественно животноводы,
+          несут огромные убытки и рискуют остаться без пропитания на зиму. В
+          районе существует 15 старых самоизливающихся скважин, собранные
+          средства пойдут на восстановление данных скважин что спасёт от
+          аномальной засухи людей, домашний скот, флору и фауну региона.
+        </div>
+      </section>
+
+      <aside style="width: 30%; height: 100%">
+        <img
+          style="width: 100%; height: 100%; position: sticky; top: 60px"
+          src="../assets/aside.png"
+          alt=""
+        />
+      </aside>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer__main">
+        <div class="footer__main-container">
+          <h3 class="footer__title">follow us on:</h3>
+          <ul class="footer__social list-rest">
+            <li class="footer__social-icon">
+              <a
+                href="https://www.youtube.com/user/teamomaze"
+                class="footer__social-icon-btn js-footer__social-icon-btn"
+                data-social-link-title="youtube"
+              >
+                <i class="icon icon--youtube"></i>
+              </a>
+            </li>
+
+            <li class="footer__social-icon">
+              <a
+                href="https://facebook.com/omaze"
+                class="footer__social-icon-btn js-footer__social-icon-btn"
+                data-social-link-title="facebook"
+              >
+                <i class="icon icon--facebook"></i>
+              </a>
+            </li>
+
+            <li class="footer__social-icon">
+              <a
+                href="https://twitter.com/omaze"
+                class="footer__social-icon-btn js-footer__social-icon-btn"
+                data-social-link-title="twitter"
+              >
+                <i class="icon icon--twitter"></i>
+              </a>
+            </li>
+
+            <li class="footer__social-icon">
+              <a
+                href="https://instagram.com/omaze"
+                class="footer__social-icon-btn js-footer__social-icon-btn"
+                data-social-link-title="instagram"
+              >
+                <i class="icon icon--instagram"></i>
+              </a>
+            </li>
+
+            <li class="footer__social-icon">
+              <a
+                href="https://www.tiktok.com/@omazeofficial"
+                class="footer__social-icon-btn js-footer__social-icon-btn"
+                data-social-link-title="tiktok"
+              >
+                <i class="icon icon--tiktok"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="footer__contact">
+            <p class="footer__contact-copy">
+              <span class="footer__contact-copy-question"> Questions? </span>
+              <br class="mobile-only" />Contact
+              <a
+                class="footer__contact-copy-link js-footer__contact-copy-link"
+                href="mailto: weloveyou@omaze.com"
+                data-footer-contact="contact us"
+              >
+                weloveyou@omaze.com
+              </a>
+            </p>
+          </div>
+          <ul class="footer__nav group list-reset">
+            <li class="footer__nav-item">
+              <a
+                class="
+                  footer__nav-link
+                  oz-btn--line--white oz-btn--line
+                  oz-btn
+                  js-footer__nav-link
+                "
+                href="/pages/about-us"
+                data-primary-link-title="about us"
+              >
+                about us
+              </a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a
+                class="
+                  footer__nav-link
+                  oz-btn--line--white oz-btn--line
+                  oz-btn
+                  js-footer__nav-link
+                "
+                href="/collections/experiences"
+                data-primary-link-title="find an experience"
+              >
+                find an experience
+              </a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a
+                class="
+                  footer__nav-link
+                  oz-btn--line--white oz-btn--line
+                  oz-btn
+                  js-footer__nav-link
+                "
+                href="mailto:weloveyou@omaze.com"
+                data-primary-link-title="business inquiries"
+              >
+                business inquiries
+              </a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a
+                class="
+                  footer__nav-link
+                  oz-btn--line--white oz-btn--line
+                  oz-btn
+                  js-footer__nav-link
+                "
+                href="/collections/winners"
+                data-primary-link-title="winner stories"
+              >
+                winner stories
+              </a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a
+                class="
+                  footer__nav-link
+                  oz-btn--line--white oz-btn--line
+                  oz-btn
+                  js-footer__nav-link
+                "
+                href="https://support.omaze.com/hc/en-us"
+                data-primary-link-title="help center"
+              >
+                help center
+              </a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a
+                class="
+                  footer__nav-link
+                  oz-btn--line--white oz-btn--line
+                  oz-btn
+                  js-footer__nav-link
+                "
+                href="/pages/rules"
+                data-primary-link-title="official rules"
+              >
+                official rules
+              </a>
+            </li>
+          </ul>
+          <nav class="footer__signature">
+            <ul class="footer__signature-nav list-rest">
+              <li class="footer__signature-nav-item">
+                <a
+                  class="
+                    footer__signature-nav-link
+                    js-footer__signature-nav-link
+                  "
+                  href="https://boards.greenhouse.io/omaze"
+                  data-secondary-link-title="careers"
+                  >Careers</a
+                >
+              </li>
+
+              <li class="footer__signature-nav-item">
+                <a
+                  class="
+                    footer__signature-nav-link
+                    js-footer__signature-nav-link
+                  "
+                  href="/pages/terms"
+                  data-secondary-link-title="terms of use"
+                  >Terms of Use</a
+                >
+              </li>
+
+              <li class="footer__signature-nav-item">
+                <a
+                  class="
+                    footer__signature-nav-link
+                    js-footer__signature-nav-link
+                  "
+                  href="/pages/privacy"
+                  data-secondary-link-title="privacy policy"
+                  >Privacy Policy</a
+                >
+              </li>
+
+              <li class="footer__signature-nav-item">
+                <a
+                  class="
+                    footer__signature-nav-link
+                    js-footer__signature-nav-link
+                  "
+                  href="https://www.omaze.com/pages/disclosures"
+                  data-secondary-link-title="state disclosures"
+                  >State Disclosures</a
+                >
+              </li>
+
+              <li class="footer__signature-nav-item">
+                <a
+                  class="
+                    footer__signature-nav-link
+                    js-footer__signature-nav-link
+                  "
+                  href="/pages/do-not-sell-my-personal-information"
+                  data-secondary-link-title="do not sell my info"
+                  >Do Not Sell My Info</a
+                >
+              </li>
+            </ul>
+            <div class="footer__signature-hyper">
+              <a href="/">
+                <i
+                  class="footer__signature-hyper-icon icon icon--logo-white"
+                ></i>
+              </a>
+              <div class="footer__sub-colophon">
+                Copyright © 2021, Omaze, Inc. All Rights Reserved.
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
